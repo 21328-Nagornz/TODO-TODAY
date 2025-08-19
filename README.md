@@ -1,0 +1,1 @@
+TODO-TODAY is a straightforward and easy-to-use app designed to help you organize your day. Quickly add, manage, and track your to-do lists all in one place. Whether you have simple tasks or important reminders, TODO-TODAY keeps you on track so you never miss a deadline. Perfect for anyone who wants a basic, no-fuss task manager.
