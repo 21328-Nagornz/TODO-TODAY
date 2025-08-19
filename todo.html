@@ -1,1 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>/todo · TODO-TODAY</title>
+  <!-- Link your CSS (adjust the path to match your project) -->
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <div class="container">
+    <section class="app" aria-label="Todo Section">
+      <!-- Header -->
+      <header class="app__head">
+        <div class="brand">/todo</div>
+        <div class="pill" title="Open tasks">● Open</div>
+        <div class="pill" title="Due today">● Due Today</div>
+      </header>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="row">
+          <div class="search">
+            <input type="search" placeholder="Search tasks…" aria-label="Search tasks" />
+            <span class="icon" aria-hidden="true">⌕</span>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" type="button" aria-label="Create new task">＋ New task</button>
+            <button class="btn btn--ghost" type="button">Import</button>
+            <button class="btn btn--ghost" type="button">Export</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="filters" role="toolbar" aria-label="Filters">
+            <button class="btn" type="button">All</button>
+            <button class="btn" type="button">Active</button>
+            <button class="btn" type="button">Completed</button>
+            <button class="btn" type="button">Today</button>
+            <button class="btn" type="button">This week</button>
+            <button class="btn" type="button">High priority</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- List -->
+      <div class="list" role="list">
+        <article class="task" role="listitem">
+          <label class="check">
+            <input type="checkbox" aria-label="Mark task complete">
+          </label>
+
+          <div class="task__body">
+            <div class="title">Finish landing page wireframes</div>
+            <div class="meta">
+              <span class="badge badge--prio-high">High</span>
+              <span class="badge badge--due">Due: Today</span>
+              <span class="badge">List: Design</span>
+            </div>
+          </div>
+
+          <div class="task__actions">
+            <button class="iconbtn iconbtn--edit" type="button" aria-label="Edit task">✎</button>
+            <button class="iconbtn iconbtn--del" type="button" aria-label="Delete task">🗑</button>
+          </div>
+        </article>
+
+        <article class="task" role="listitem">
+          <label class="check">
+            <input type="checkbox" aria-label="Mark task complete" checked>
+          </label>
+
+          <div class="task__body">
+            <div class="title">Write unit tests for auth module</div>
+            <div class="meta">
+              <span class="badge badge--prio-med">Medium</span>
+              <span class="badge">List: Backend</span>
+            </div>
+          </div>
+
+          <div class="task__actions">
+            <button class="iconbtn iconbtn--edit" type="button" aria-label="Edit task">✎</button>
+            <button class="iconbtn iconbtn--del" type="button" aria-label="Delete task">🗑</button>
+          </div>
+        </article>
+
+        <article class="task" role="listitem">
+          <label class="check">
+            <input type="checkbox" aria-label="Mark task complete">
+          </label>
+
+          <div class="task__body">
+            <div class="title">Plan marketing posts for launch</div>
+            <div class="meta">
+              <span class="badge badge--prio-low">Low</span>
+              <span class="badge badge--due">Due: Fri</span>
+              <span class="badge">List: Marketing</span>
+            </div>
+          </div>
+
+          <div class="task__actions">
+            <button class="iconbtn iconbtn--edit" type="button" aria-label="Edit task">✎</button>
+            <button class="iconbtn iconbtn--del" type="button" aria-label="Delete task">🗑</button>
+          </div>
+        </article>
+
+        <!-- Empty state example (keep for when there are no tasks)
+        <div class="empty">
+          No tasks yet. Click <strong>＋ New task</strong> to add your first task.
+        </div>
+        -->
+      </div>
+    </section>
+  </div>
+</body>
+</html>
 
