@@ -168,6 +168,15 @@ a{color:inherit}
 .badge--due{border-color:#27344a}
 
 .task__actions{ display:flex; gap:8px; align-items:center; }
+.iconbtn.iconbtn--edit {
+  color: rgb(255, 255, 255);
+}
+
+.iconbtn.iconbtn--del {
+  color: rgb(255, 255, 255);
+}
+
+
 .iconbtn{
   width:38px; height:38px;
   display:grid; place-items:center;
