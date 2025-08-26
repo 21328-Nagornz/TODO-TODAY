@@ -66,7 +66,7 @@ a{color:inherit}
 }
 .brand{
   font-size: clamp(18px, 3.2vw, 24px);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing:.2px;
   margin-right:auto;
 }
@@ -162,7 +162,7 @@ a{color:inherit}
 }
 
 .task__body{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-.title{ font-weight:600; letter-spacing:.2px; }
+.title{ font-weight:300; letter-spacing:.2px; }
 .meta{ display:flex; gap:8px; flex-wrap:wrap; color:var(--muted); font-size:12px; }
 
 .badge{
