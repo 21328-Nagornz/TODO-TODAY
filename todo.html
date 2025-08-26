@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TODO-List</title>
-  <!-- Link your CSS (adjust the path to match your project) -->
   <link rel="stylesheet" href="todo.css">
 </head>
 <body>
@@ -29,7 +28,7 @@
             <button class="btn btn--primary" type="button" aria-label="Create new task">＋ New task</button>
             <button class="btn btn--ghost" type="button">Import</button>
             <button class="btn btn--ghost" type="button">Export</button>
-            <button class="btn btn--recently-deleted" type="button" aria-label="Recently Deleted" onclick="location.href='recentlydeleted.html'">Recently Deleted</button>
+            <button class="btn btn--recently-deleted" type="button" aria-label="Recently Deleted" onclick="location.href='recently-deleted.html'">Recently Deleted</button>
           </div>
         </div>
         <div class="row">
@@ -48,7 +47,7 @@
       <div class="list" role="list">
         <article class="task" role="listitem">
           <label class="check">
-            <input type="checkbox" aria-label="Mark task complete">
+            <input type="checkbox" aria-label="Mark task complete" />
           </label>
 
           <div class="task__body">
@@ -68,7 +67,7 @@
 
         <article class="task" role="listitem">
           <label class="check">
-            <input type="checkbox" aria-label="Mark task complete" checked>
+            <input type="checkbox" aria-label="Mark task complete" checked />
           </label>
 
           <div class="task__body">
@@ -87,7 +86,7 @@
 
         <article class="task" role="listitem">
           <label class="check">
-            <input type="checkbox" aria-label="Mark task complete">
+            <input type="checkbox" aria-label="Mark task complete" />
           </label>
 
           <div class="task__body">
@@ -104,12 +103,6 @@
             <button class="iconbtn iconbtn--del" type="button" aria-label="Delete task">🗑</button>
           </div>
         </article>
-
-        <!-- Empty state example (keep for when there are no tasks)
-        <div class="empty">
-          No tasks yet. Click <strong>＋ New task</strong> to add your first task.
-        </div>
-        -->
       </div>
     </section>
   </div>
