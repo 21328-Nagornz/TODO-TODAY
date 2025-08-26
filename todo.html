@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TODO-List</title>
+  <!-- Link your CSS (adjust the path to match your project) -->
   <link rel="stylesheet" href="todo.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
         <div class="pill" title="Open tasks">● Open</div>
         <div class="pill" title="Due today">● Due Today</div>
       </header>
-
+      
       <!-- Toolbar -->
       <div class="toolbar">
         <div class="row">
@@ -41,14 +42,13 @@
           </div>
         </div>
       </div>
-
+      
       <!-- List -->
       <div class="list" role="list">
         <article class="task" role="listitem">
           <label class="check">
             <input type="checkbox" aria-label="Mark task complete">
           </label>
-
           <div class="task__body">
             <div class="title">Finish landing page wireframes</div>
             <div class="meta">
@@ -57,18 +57,16 @@
               <span class="badge">List: Design</span>
             </div>
           </div>
-
           <div class="task__actions">
             <button class="iconbtn iconbtn--edit" type="button" aria-label="Edit task">✎</button>
             <button class="iconbtn iconbtn--del" type="button" aria-label="Delete task">🗑</button>
           </div>
         </article>
-
+        
         <article class="task" role="listitem">
           <label class="check">
             <input type="checkbox" aria-label="Mark task complete" checked>
           </label>
-
           <div class="task__body">
             <div class="title">Write unit tests for auth module</div>
             <div class="meta">
@@ -76,18 +74,16 @@
               <span class="badge">List: Backend</span>
             </div>
           </div>
-
           <div class="task__actions">
             <button class="iconbtn iconbtn--edit" type="button" aria-label="Edit task">✎</button>
             <button class="iconbtn iconbtn--del" type="button" aria-label="Delete task">🗑</button>
           </div>
         </article>
-
+        
         <article class="task" role="listitem">
           <label class="check">
             <input type="checkbox" aria-label="Mark task complete">
           </label>
-
           <div class="task__body">
             <div class="title">Plan marketing posts for launch</div>
             <div class="meta">
@@ -96,33 +92,19 @@
               <span class="badge">List: Marketing</span>
             </div>
           </div>
-
           <div class="task__actions">
             <button class="iconbtn iconbtn--edit" type="button" aria-label="Edit task">✎</button>
             <button class="iconbtn iconbtn--del" type="button" aria-label="Delete task">🗑</button>
           </div>
         </article>
+        
+        <!-- Empty state example (keep for when there are no tasks)
+        <div class="empty">
+          No tasks yet. Click <strong>＋ New task</strong> to add your first task.
+        </div>
+        -->
       </div>
     </section>
   </div>
-
-  <script>
-    // Toggle completed class on task when checkbox changes
-    document.querySelectorAll('.check input[type="checkbox"]').forEach(checkbox => {
-      checkbox.addEventListener('change', () => {
-        const task = checkbox.closest('.task');
-        if (checkbox.checked) {
-          task.classList.add('completed');
-        } else {
-          task.classList.remove('completed');
-        }
-      });
-
-      // Initialize on page load for checked checkboxes
-      if (checkbox.checked) {
-        checkbox.closest('.task').classList.add('completed');
-      }
-    });
-  </script>
 </body>
 </html>
