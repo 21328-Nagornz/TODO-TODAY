@@ -193,6 +193,19 @@ a {
   text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
 }
 
+.btn--primary--deleted {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--danger), white 8%),
+    var(--danger)
+  );
+  border-color: color-mix(in oklab, var(--danger), black 30%);
+  color: #1a0606;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+
 .btn--ghost {
   background: #0f131a;
 }
