@@ -1,0 +1,48 @@
+@font-face {
+    font-family: itim;
+    src: url(Itim-Regular.ttf);
+}
+
+body{
+    background-color: black;
+    font-family: itim;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+.buttoncon {
+    display: flex;
+    justify-content: center;
+}
+
+.todobutton{
+    font-family: itim;
+    color: grey;
+    background-color: azure;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    transition-duration: 500ms;
+}
+
+.todobutton:hover{
+    color:black;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
