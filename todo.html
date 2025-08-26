@@ -28,7 +28,6 @@
             <button class="btn btn--primary" type="button" aria-label="Create new task">＋ New task</button>
             <button class="btn btn--ghost" type="button">Import</button>
             <button class="btn btn--ghost" type="button">Export</button>
-            <button class="btn btn--recently-deleted" type="button" aria-label="Recently Deleted" onclick="location.href='recently-deleted.html'">Recently Deleted</button>
           </div>
         </div>
         <div class="row">
@@ -47,7 +46,7 @@
       <div class="list" role="list">
         <article class="task" role="listitem">
           <label class="check">
-            <input type="checkbox" aria-label="Mark task complete" />
+            <input type="checkbox" aria-label="Mark task complete">
           </label>
 
           <div class="task__body">
@@ -67,7 +66,7 @@
 
         <article class="task" role="listitem">
           <label class="check">
-            <input type="checkbox" aria-label="Mark task complete" checked />
+            <input type="checkbox" aria-label="Mark task complete" checked>
           </label>
 
           <div class="task__body">
@@ -86,7 +85,7 @@
 
         <article class="task" role="listitem">
           <label class="check">
-            <input type="checkbox" aria-label="Mark task complete" />
+            <input type="checkbox" aria-label="Mark task complete">
           </label>
 
           <div class="task__body">
@@ -106,5 +105,24 @@
       </div>
     </section>
   </div>
+
+  <script>
+    // Toggle completed class on task when checkbox changes
+    document.querySelectorAll('.check input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const task = checkbox.closest('.task');
+        if (checkbox.checked) {
+          task.classList.add('completed');
+        } else {
+          task.classList.remove('completed');
+        }
+      });
+
+      // Initialize on page load for checked checkboxes
+      if (checkbox.checked) {
+        checkbox.closest('.task').classList.add('completed');
+      }
+    });
+  </script>
 </body>
 </html>

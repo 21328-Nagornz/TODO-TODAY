@@ -1,3 +1,4 @@
+/* ====== Font Face ====== */
 @font-face {
   font-family: 'Itim';
   src: url('Itim-Regular.ttf') format('truetype');
@@ -16,7 +17,7 @@
   padding-bottom: -30px;
 }
 
-/* Design Tokens */
+/* ====== Design Tokens ====== */
 :root {
   --bg: #0e0f12;
   --panel: #15171c;
@@ -29,10 +30,11 @@
   --danger: #ef4444;
   --ring: color-mix(in oklab, var(--brand), white 20%);
   --radius: 16px;
-  --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --shadow: 0 8px 30px rgba(0, 0, 0, .35);
   --gap: 14px;
 }
 
+/* ====== Page ====== */
 * {
   box-sizing: border-box;
 }
@@ -71,6 +73,7 @@ a {
   overflow: hidden;
 }
 
+/* ====== Header ====== */
 .app__head {
   padding: 20px clamp(18px, 3vw, 28px);
   background: linear-gradient(180deg, var(--panel-2), transparent);
@@ -84,7 +87,7 @@ a {
 .brand {
   font-size: clamp(18px, 3.2vw, 24px);
   font-weight: 400;
-  letter-spacing: 0.2px;
+  letter-spacing: .2px;
   margin-right: auto;
 }
 
@@ -100,6 +103,7 @@ a {
   font-size: 13px;
 }
 
+/* ====== Toolbar ====== */
 .toolbar {
   display: grid;
   grid-template-columns: 1fr;
@@ -129,7 +133,7 @@ a {
   border-radius: 12px;
   padding: 0 42px 0 14px;
   outline: none;
-  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  transition: border-color .18s ease, box-shadow .18s ease;
 }
 
 .search input::placeholder {
@@ -146,7 +150,7 @@ a {
   right: 10px;
   top: 50%;
   translate: 0 -50%;
-  opacity: 0.7;
+  opacity: .7;
 }
 
 .filters,
@@ -165,7 +169,7 @@ a {
   border-radius: 12px;
   font-size: 14px;
   cursor: pointer;
-  transition: transform 0.08s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  transition: transform .08s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
 }
 
 .btn:hover {
@@ -181,37 +185,14 @@ a {
   border-color: color-mix(in oklab, var(--brand), black 30%);
   color: #06101d;
   font-weight: 600;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
 }
 
 .btn--ghost {
   background: #0f131a;
 }
 
-/* New Recently Deleted Button Style */
-.btn--recently-deleted {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border: none;
-  color: white;
-  font-weight: 600;
-  padding: 10px 16px;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.5);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn--recently-deleted:hover {
-  background: linear-gradient(135deg, #764ba2, #667eea);
-  box-shadow: 0 6px 15px rgba(118, 75, 162, 0.7);
-}
-
-.btn--recently-deleted:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 7px rgba(118, 75, 162, 0.6);
-}
-
-/* Task List */
+/* ====== Task List ====== */
 .list {
   padding: 20px clamp(18px, 3vw, 28px) 28px;
   display: grid;
@@ -250,111 +231,5 @@ a {
   height: 18px;
   border: 2px solid #3a4356;
   border-radius: 6px;
-  background: #0b0e13;
-  cursor: pointer;
-  position: relative;
-  outline: none;
-  transition: border-color 0.18s ease, background 0.18s ease;
-}
-
-.check input:hover {
-  border-color: var(--ring);
-}
-
-.check input:checked {
-  background: linear-gradient(180deg, var(--ok), color-mix(in oklab, var(--ok), black 12%));
-  border-color: color-mix(in oklab, var(--ok), black 25%);
-}
-
-/* Strike-through task title when checked */
-.check input:checked ~ .task__body .title {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-
-/* Task body */
-.task__body {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.title {
-  font-weight: 300;
-  letter-spacing: 0.2px;
-  transition: text-decoration 0.3s ease, opacity 0.3s ease;
-}
-
-.meta {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-/* Badges */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid #283042;
-  background: #0b0f16;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1;
-}
-
-.badge--prio-low {
-  border-color: #214a2d;
-  color: #a7e8b9;
-  background: #0b1310;
-}
-
-.badge--prio-med {
-  border-color: #4b3a16;
-  color: #ffd89a;
-  background: #131009;
-}
-
-.badge--prio-high {
-  border-color: #4b1f22;
-  color: #ffb7bd;
-  background: #150b0c;
-}
-
-.badge--due {
-  border-color: #27344a;
-}
-
-/* Task Actions */
-.task__actions {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-/* Edit and Delete Buttons style same as original */
-.iconbtn {
-  appearance: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 1;
-  color: var(--text);
-  padding: 4px;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
-}
-
-.iconbtn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.iconbtn:active {
-  background-color: rgba(255, 255, 255, 0.2);
+  background: #0b0e13
 }
