@@ -1,3 +1,12 @@
+/* ====== Font Face ====== */
+@font-face {
+  font-family: 'Itim';
+  src: url('Itim-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ====== Design Tokens ====== */
 :root{
   --bg: #0e0f12;
@@ -20,7 +29,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family: "Itim-Regular.ttf", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+  font-family: 'Itim', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
   background: radial-gradient(1200px 700px at 20% -10%, #1b1f27 0%, #0e0f12 45%) fixed,
               radial-gradient(1200px 700px at 120% 110%, #18202b 0%, #0e0f12 45%) fixed;
   color:var(--text);
