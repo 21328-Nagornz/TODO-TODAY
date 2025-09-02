@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RecentlyDeleted</title>
+    <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <h1>Recently Deleted</h1>
+<div class="container">
+    <section class="app" aria-label="Recently Deleted">
+        <header class="app__head">
+            <div class="brand">Recently Deleted</div>
+            <a class="btn" href="/index.html">Back</a>
+        </header>
+
+        <div class="toolbar">
+            <div class="row">
+                <div class="search">
+                    <input type="search" placeholder="Search Deleted Task..." aria-label="Search Deleted Task">
+                    <span class="icon" aria-hidden="true">⌕</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <article class="task" role="listitem">
+ 
+                <div class="task_body">
+                    <div class="title">Corn Hub</div>
+                    <div class="meta">
+                        <span class="badge badge--prio-high">Due: Today</span>
+                    </div>
+                </div>
+
+                <div class="task_actions">
+                    <button class="iconbtn" type="button" aria-label="Restore Task" style="color:white;">⟲</button>
+                </div>
+
+            </article>
+        </div>
+
+        <div class="list">
+            <article class="task" role="listitem">
+ 
+                <div class="task_body">
+                    <div class="title">Gooning</div>
+                    <div class="meta">
+                        <span class="badge badge--prio-med">Due: Tomorrow</span>
+                    </div>
+                </div>
+
+                <div class="task_actions">
+                    <button class="iconbtn" type="button" aria-label="Restore Task" style="color:white;">⟲</button>
+                </div>
+
+            </article>
+        </div>
+
+        <div class="list">
+            <article class="task" role="listitem">
+ 
+                <div class="task_body">
+                    <div class="title">Watch Core</div>
+                    <div class="meta">
+                        <span class="badge badge--prio-low">Due: Fri</span>
+                    </div>
+                </div>
+
+                <div class="task_actions">
+                    <button class="iconbtn" type="button" aria-label="Restore Task" style="color:white;">⟲</button>
+                </div>
+
+            </article>
+        </div>
+    </section>
+</div>
 </body>
 </html>
