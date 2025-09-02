@@ -1,0 +1,456 @@
+/* ====== Font Face ====== */
+@font-face {
+  font-family: 'Itim';
+  src: url('Itim-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  padding-top: -30px;
+  padding-bottom: -30px;
+}
+
+/* ====== Design Tokens ====== */
+:root {
+  --bg: #0e0f12;
+  --panel: #15171c;
+  --panel-2: #101217;
+  --text: #e9edf1;
+  --muted: #a7b0bb;
+  --brand: #4aa8ff;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --ring: color-mix(in oklab, var(--brand), white 20%);
+  --radius: 16px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, .35);
+  --gap: 14px;
+}
+
+/* ====== Page ====== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Itim', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, "Noto Sans";
+  background: radial-gradient(1200px 700px at 20% -10%, #1b1f27 0%, #0e0f12 45%) fixed,
+    radial-gradient(1200px 700px at 120% 110%, #18202b 0%, #0e0f12 45%) fixed;
+  color: var(--text);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: clamp(16px, 3vw, 28px);
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.app {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--panel), #000 10%),
+    var(--panel)
+  );
+  border: 1px solid #22262f;
+  border-radius: calc(var(--radius) + 2px);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* ====== Header ====== */
+.app__head {
+  padding: 20px clamp(18px, 3vw, 28px);
+  background: linear-gradient(180deg, var(--panel-2), transparent);
+  border-bottom: 1px solid #22262f;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: clamp(18px, 3.2vw, 24px);
+  font-weight: 400;
+  letter-spacing: .2px;
+  margin-right: auto;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #0f131a;
+  border-style: solid;
+  border-color: #217a3c;
+  border-width: 0.2px;
+  color: #a7e8b9;
+  font-size: 13px;
+}
+
+.pill:hover{
+    cursor:pointer;
+}
+
+/* ====== Toolbar ====== */
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  padding: 16px clamp(18px, 3vw, 28px) 18px;
+  background: linear-gradient(180deg, #0f1217 0%, transparent 100%);
+  border-bottom: 1px solid #1f2430;
+}
+
+.row {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.search {
+  position: relative;
+  flex: 1 1 320px;
+}
+
+.search input {
+  width: 100%;
+  height: 44px;
+  background: #0c0f14;
+  color: var(--text);
+  border: 1px solid #242a36;
+  border-radius: 12px;
+  padding: 0 42px 0 14px;
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.search input::placeholder {
+  color: #6b7480;
+}
+
+.search input:focus {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring), transparent 70%);
+}
+
+.search .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  translate: 0 -50%;
+  opacity: .7;
+}
+
+.filters,
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid #2a3140;
+  background: #0f131a;
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .08s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.btn:hover {
+  border-color: #394155;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--brand), white 8%), var(--brand));
+  border-color: color-mix(in oklab, var(--brand), black 30%);
+  color: #06101d;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
+}
+
+.btn--primary--deleted {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--danger), white 8%),
+    var(--danger)
+  );
+  border-color: color-mix(in oklab, var(--danger), black 30%);
+  color: #1a0606;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+
+.btn--ghost {
+  background: #0f131a;
+}
+
+/* ====== Task List ====== */
+.list {
+  padding: 20px clamp(18px, 3vw, 28px) 28px;
+  display: grid;
+  gap: 12px;
+}
+
+.task {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: flex-start;
+  background: linear-gradient(180deg, #0c0f14, #0b0e13);
+  border: 1px solid #212734;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 0 #0a0c11 inset, 0 -2px 0 #0a0c11 inset;
+}
+
+.task:hover {
+  border-color: #2b3242;
+}
+
+/* checkbox */
+.check {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 4px;
+}
+
+.check input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3a4356;
+  border-radius: 6px;
+  background: #0b0e13;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: border-color .18s ease, background .18s ease;
+}
+
+.check input:hover {
+  border-color: var(--ring);
+}
+
+.check input:checked {
+  background: linear-gradient(180deg, var(--ok), color-mix(in oklab, var(--ok), black 12%));
+  border-color: color-mix(in oklab, var(--ok), black 25%);
+}
+
+.task__body {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-weight: 300;
+  letter-spacing: .2px;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #283042;
+  background: #0b0f16;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.badge--prio-low {
+  border-color: #214a2d;
+  color: #a7e8b9;
+  background: #0b1310;
+}
+
+.badge--prio-med {
+  border-color: #4b3a16;
+  color: #ffd89a;
+  background: #131009;
+}
+
+.badge--prio-high {
+  border-color: #4b1f22;
+  color: #ffb7bd;
+  background: #150b0c;
+}
+
+.badge--due {
+  border-color: #27344a;
+}
+
+.task__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.iconbtn.iconbtn--edit {
+  color: rgb(255, 255, 255);
+}
+
+.iconbtn.iconbtn--del {
+  color: rgb(255, 255, 255);
+}
+
+.iconbtn {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  border: 1px solid #2a3140;
+  background: #0f131a;
+  cursor: pointer;
+  transition: border-color .18s ease, transform .08s ease, background .18s ease;
+}
+
+.iconbtn:hover {
+  border-color: #3a4356;
+}
+
+.iconbtn:active {
+  transform: translateY(1px);
+}
+
+/* Strike-through and opacity when checked */
+.task:has(.check input:checked) .title {
+  color: #98a4b3;
+  text-decoration: line-through 1.5px solid #5b6576;
+}
+
+.task:has(.check input:checked) {
+  opacity: .9;
+}
+
+/* ====== Empty State ====== */
+.empty {
+  display: grid;
+  place-items: center;
+  padding: 42px 16px 56px;
+  color: var(--muted);
+  border: 1px dashed #2a3140;
+  border-radius: 14px;
+  background: repeating-linear-gradient(
+    135deg,
+    #0a0d12,
+    #0a0d12 10px,
+    #0b0e13 10px,
+    #0b0e13 20px
+  );
+}
+
+/* ====== Focus ====== */
+.btn:focus-visible,
+.iconbtn:focus-visible,
+.search input:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--brand), white 10%);
+  outline-offset: 2px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 560px) {
+  .task {
+    grid-template-columns: auto 1fr;
+  }
+  .task__actions {
+    grid-column: 1 / -1;
+  }
+}
+
+.input_title {
+    width: 500px;
+    height: 50px;
+    border-radius: 7px;
+    padding-left: 10px;
+    border-style: solid;
+    border-color: grey;
+    background-color:rgba(132, 132, 132, 0.35);
+    color: white;
+    font-size: 15px;
+}
+
+.input_title::placeholder{
+    color: rgb(209, 209, 209);
+    font-size: 15px;
+}
+
+.lowpriority {
+  color: #a7e8b9;
+}
+.mediumpriority {
+  color: #ffd89a;
+}
+.highpriority {
+  color: #ffb7bd;
+}
+
+.calendar {
+    width: 200px;
+    height: 30px;
+    padding-left: 2px;
+    border-style: solid;
+    border-radius: 7px;
+    border-width: 2px;
+    background-color: rgb(107, 107, 107);
+    color: white;
+}
+
+.input_title::placeholder{
+    font-family: Itim;
+}
+
+.input_title {
+    font-family: Itim;
+}
+
+.calendar {
+    font-family: Itim;
+}

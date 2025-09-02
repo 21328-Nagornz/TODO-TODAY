@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create New</title>
+  <link rel="stylesheet" href="newtask.css">
+</head>
+<body>
+    <p class="head">TODO-TODAY</p>
+    <div class="container">
+        <section class="app" aria-label="Todo Section">
+        <!-- Header -->
+        <header class="app__head">
+            <div class="brand">Create a new task!</div>
+            <div class="pill" title="Due today">Create</div>
+        </header>
+        <div class="list" role="list">
+            <form>
+                <legend>Input New Task:</legend>
+                <input type="text" class="input_title" name="title" placeholder="Input new task here!">
+            </form>
+            <form>
+                <legend>Select Priority:</legend>
+                <input type="radio" name="difficulty" id="easy" value="easy">
+                <label for="easy" class="lowpriority">Low</label>
+                <input type="radio" name="difficulty" id="medium" value="medium">
+                <label for="medium" class="mediumpriority">Medium</label>
+                <input type="radio" name="difficulty" id="hard" value="hard">
+                <label for="hard" class="highpriority">High</label>
+            </form>
+            <form>
+                <legend>Select Due Date:</legend>
+                <input type="date" class="calendar">
+            </form>
+        </div>
+        </section>
+    </div>
+</body>
+</html>
+
