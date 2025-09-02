@@ -1,0 +1,30 @@
+.header {
+    width: 60%;
+    height: 60px;
+    margin: auto;
+    background-color: rgb(39, 39, 39);
+    border-radius: 15px;
+    border-color: rgb(146, 146, 146);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #0f131a;
+    border: 1px solid #232833;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.header > a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 250ms;
+}
+
+.header > a:hover {
+    cursor: pointer;
+    transition: 250ms;
+    color: rgb(247, 194, 194)
+}
