@@ -20,6 +20,8 @@
   font-weight: bold;
   padding-top: -30px;
   padding-bottom: -30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* ====== Design Tokens ====== */
@@ -46,7 +48,7 @@
 
 html,
 body {
-  height: 100%;
+  height: 110%;
 }
 
 body {
@@ -217,7 +219,9 @@ a {
 
 /* ====== Task List ====== */
 .list {
-  padding: 20px clamp(18px, 3vw, 28px) 28px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 20px;
   display: grid;
   gap: 12px;
 }
@@ -227,7 +231,7 @@ a {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 14px;
-  align-items: flex-start;
+  align-items: center;
   background: linear-gradient(180deg, #0c0f14, #0b0e13);
   border: 1px solid #212734;
   border-radius: 14px;
@@ -245,7 +249,7 @@ a {
   place-items: center;
   width: 22px;
   height: 22px;
-  margin-top: 4px;
+  margin: 0;
 }
 
 .check input {
@@ -327,7 +331,6 @@ a {
 
 .task__actions {
   display: flex;
-  gap: 8px;
   align-items: center;
 }
 
