@@ -414,9 +414,14 @@ a {
 
 .main{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 span {
   color: rgb(205, 205, 205);
+}
+
+pre {
+  font-family: itim;
 }
