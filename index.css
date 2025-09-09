@@ -64,7 +64,12 @@ body {
   padding: clamp(16px, 3vw, 28px);
 
 }
-
+.logo{
+    display: flex;
+    justify-self: center;
+    width: 500px;
+    margin-top: 100px;
+}
 a {
   color: inherit;
 }
@@ -199,6 +204,13 @@ a {
   color: #06101d;
   font-weight: 600;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
+}
+.text {
+    margin-top: -30px;
+}
+
+.logo {
+    margin-top: 20px;
 }
 
 .btn--primary--deleted {
@@ -425,6 +437,7 @@ a {
 .buttoncon {
     display: flex;
     justify-content: center;
+    margin-top: -20px;
 }
 
 .todobutton{
