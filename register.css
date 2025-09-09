@@ -49,6 +49,7 @@
 .container_full:hover{
     border-width: 10px;
     transition-duration: 500ms;
+    border-color: white;
     .main{
         margin-top: 25px;
         font-size: 35px;
