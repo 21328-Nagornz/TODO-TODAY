@@ -28,15 +28,6 @@ form.registration {
     display: block;
 }
 
-.userinput {
-    width: 200px;
-}
-.pswinput {
-    width: 200px;
-}
-.emailinput {
-    width: 200px;
-}
 
 .main{
     margin-top: 5px;
@@ -97,7 +88,6 @@ form.registration {
 .pswinput, .emailinput, .userinput {
     font-family: Itim;
     width: 100%;
-    max-width: 360px;
     height: 40px;
     padding: 8px 12px;
     border-radius: 10px;
@@ -107,6 +97,7 @@ form.registration {
     outline: none;
     transition: border-color 200ms ease, box-shadow 200ms ease, background 200ms ease;
     display: block;
+    box-sizing: border-box;
 }
 
 .pswinput:focus, .emailinput:focus, .userinput:focus {
@@ -131,7 +122,6 @@ form.registration {
     }
     .pswinput, .emailinput, .userinput {
         width: 100%;
-        max-width: 320px;
     }
     .submitbutton {
         width: 100%;
