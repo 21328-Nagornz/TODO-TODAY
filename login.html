@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Log In<Inp></Inp></title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="header">
@@ -18,25 +19,22 @@
     </div>
     <p class="head">TODO-TODAY</p>
     <div class="register_box">
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    <h1>Login</h1>
-    <p>Don't have an account? <a href="/register.html">Register</a></p>
-    <form>
-        <label for="username">Username: </label>
-        <input type="text" id="username" name="username">
-        <br>
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password">
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="container_full">
+        <h1>Log In</h1>
+        <p>Don't have an account? <a href="/register.html">Register</a></p>
+        <form action="register.php" method="post" class="registration"> <!-- DO THIS LATER -->
+            <div class="usernamereal">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" class="userinput">
+            </div>
+            <div class="passwordreal">
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" class="pswinput">
+            </div>
+            <input type="submit" value="Log In" class="submitbutton">
+        </form>
+    </div>
 </body>
 </html>
     </div>
