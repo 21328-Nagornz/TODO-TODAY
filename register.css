@@ -16,7 +16,7 @@
 
 .main{
     margin-top: 35px;
-    color: rgb(212, 179, 255);
+    color: white;
     transition-duration: 500ms;
 }
 
@@ -53,13 +53,12 @@
         margin-top: 25px;
         font-size: 35px;
         transition-duration: 500ms;
-        color: rgb(232, 214, 255);
     }
 }
 
 .pswinput::placeholder, .emailinput::placeholder, .userinput::placeholder {
     font-family: Itim;
-    color: black;
+    color: rgb(82, 82, 82);
 }
 
 .pswinput, .emailinput, .userinput {
@@ -67,14 +66,9 @@
     width: 200px;
     height: 25px;
     border-radius: 5px;
-    border-color: antiquewhite;
-    background-color:rgb(255, 239, 254);
+    border-color: white;
 }
 
-.realreal:hover{
-    color:rgb(255, 196, 196);
-    transition-duration: 500ms;
-}
 .realreal{
     transition-duration: 500ms;
 }

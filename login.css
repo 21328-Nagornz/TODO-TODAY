@@ -29,11 +29,7 @@
 
 .main{
     margin-top: 35px;
-    color: rgb(212, 179, 255);
-    transition-duration: 500ms;
-}
-.realreal:hover{
-    color:rgb(255, 196, 196);
+    color: white;
     transition-duration: 500ms;
 }
 .realreal{
@@ -61,13 +57,12 @@
         margin-top: 25px;
         font-size: 35px;
         transition-duration: 500ms;
-        color: rgb(232, 214, 255);
     }
 }
 
 .pswinput::placeholder, .emailinput::placeholder, .userinput::placeholder {
     font-family: Itim;
-    color: black;
+    color: rgb(82, 82, 82);
 }
 
 
@@ -77,5 +72,4 @@
     height: 25px;
     border-radius: 5px;
     border-color: antiquewhite;
-    background-color:rgb(255, 239, 254);
 }
