@@ -47,11 +47,11 @@
     transition-duration: 500ms;
 }
 .container_full:hover{
-    border-width: 10px;
+    border-width: 2px;
     transition-duration: 500ms;
     border-color: white;
     .main{
-        margin-top: 25px;
+        margin-top: 35px;
         font-size: 35px;
         transition-duration: 500ms;
     }
