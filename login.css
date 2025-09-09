@@ -15,21 +15,67 @@
 }
 
 .submitbutton {
-    width: 60px;
+    width: 70px;
     justify-content: center;
     display: flex;
     align-self: center;
+    font-family: itim;
+    border-radius: 7px;
+    height: 25px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 
+
+.main{
+    margin-top: 35px;
+    color: rgb(212, 179, 255);
+    transition-duration: 500ms;
+}
+.realreal:hover{
+    color:rgb(255, 196, 196);
+    transition-duration: 500ms;
+}
+.realreal{
+    transition-duration: 500ms;
+}
 .container_full{
     display: flex;
     flex-direction: column;
     align-items: center;
     border-style: solid;
-    border-width: 10px;
+    border-width: 3px;
     border-color: white;
     width: 500px;
-    height: 290px;
+    height: 310px;
     justify-self: center;
     border-radius: 20px;
+    border-color: rgb(211, 236, 255);
+    transition-duration: 500ms;
+}
+
+.container_full:hover{
+    border-width: 10px;
+    transition-duration: 500ms;
+    .main{
+        margin-top: 25px;
+        font-size: 35px;
+        transition-duration: 500ms;
+        color: rgb(232, 214, 255);
+    }
+}
+
+.pswinput::placeholder, .emailinput::placeholder, .userinput::placeholder {
+    font-family: Itim;
+    color: black;
+}
+
+
+.pswinput, .emailinput, .userinput {
+    font-family: itim;
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border-color: antiquewhite;
+    background-color:rgb(255, 239, 254);
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In<Inp></Inp></title>
+    <title>Log In</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="login.css">
@@ -21,16 +21,16 @@
     <div class="register_box">
 <body>
     <div class="container_full">
-        <h1>Log In</h1>
-        <p>Don't have an account? <a href="/register.html">Register</a></p>
+        <h1 class="main">Log In</h1>
+        <p>Don't have an account? <a href="/register.html" class="realreal">Register</a></p>
         <form action="register.php" method="post" class="registration"> <!-- DO THIS LATER -->
             <div class="usernamereal">
                 <label for="username">Username: </label>
-                <input type="text" id="username" name="username" class="userinput">
+                <input type="text" id="username" name="username" class="userinput" placeholder="Enter Username">
             </div>
             <div class="passwordreal">
             <label for="password">Password: </label>
-            <input type="password" id="password" name="password" class="pswinput">
+            <input type="password" id="password" name="password" class="pswinput" placeholder="Enter Password">
             </div>
             <input type="submit" value="Log In" class="submitbutton">
         </form>
