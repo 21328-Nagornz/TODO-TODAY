@@ -1,122 +1,133 @@
-.header {
-    margin-bottom: 30px;
-}
-
+.page-bg,
 body {
-    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    font-family: Itim, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0ea5e9 100%);
     min-height: 100vh;
-    font-family: 'Itim', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+    margin: 0;
+    margin-top: 10px; /* match header.css */
+    padding: clamp(16px, 3vw, 28px); /* match header.css */
+    display: block; /* match layout of other pages so header styles are consistent */
+    color: #e5e7eb;
 }
-
-.container_full {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.registration,
+form.registration {
+    display: grid !important;
+    grid-auto-rows: max-content;
+    gap: 12px;
     width: 100%;
-    max-width: 400px;
-    min-height: 400px;
-    margin: 60px auto 0 auto;
-    padding: 36px 32px 32px 32px;
-    border-radius: 24px;
-    background: rgba(30, 34, 44, 0.85);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-    border: 1.5px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(8px);
-    transition: box-shadow 0.3s, border 0.3s;
-}
-.container_full:hover {
-    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.28);
-    border: 1.5px solid #4aa8ff;
+    align-items: stretch;
 }
 
-.main {
-    margin-top: 0;
-    margin-bottom: 18px;
-    color: #fff;
-    font-size: 2.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    transition: color 0.3s;
-}
-
-.registration {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 100%;
-    margin-top: 18px;
-}
-
-.usernamereal, .passwordreal, .emailreal {
-    display: flex;
-    flex-direction: column;
+.registration > div {
+    display: grid !important;
     gap: 6px;
 }
 
-label {
-    color: #a7b0bb;
-    font-size: 1rem;
-    margin-bottom: 2px;
+.registration label {
+    color: #cbd5e1;
+    display: block;
 }
 
-.userinput, .pswinput, .emailinput {
-    font-family: 'Itim', system-ui;
-    width: 100%;
-    height: 38px;
-    border-radius: 8px;
-    border: 1.5px solid #232833;
-    background: rgba(255,255,255,0.07);
-    color: #e9edf1;
-    font-size: 1.1rem;
-    padding: 0 12px;
-    outline: none;
-    transition: border 0.2s, box-shadow 0.2s;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+.userinput {
+    width: 200px;
 }
-.userinput:focus, .pswinput:focus, .emailinput:focus {
-    border: 1.5px solid #4aa8ff;
-    background: rgba(255,255,255,0.13);
+.pswinput {
+    width: 200px;
+}
+.emailinput {
+    width: 200px;
 }
 
-.userinput::placeholder, .pswinput::placeholder, .emailinput::placeholder {
-    color: #a7b0bb;
-    opacity: 0.8;
+.main{
+    margin-top: 5px;
+    color: white;
+    transition-duration: 500ms;
+    font-size: 28px;
+    text-align: center;
 }
 
 .submitbutton {
     width: 100%;
-    height: 42px;
-    margin-top: 10px;
+    max-width: 220px;
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    font-family: Itim;
     border-radius: 10px;
+    height: 44px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     border: none;
-    background: linear-gradient(90deg, #4aa8ff 0%, #6dd5ed 100%);
-    color: #fff;
-    font-family: 'Itim', system-ui;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(74,168,255,0.10);
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-}
-.submitbutton:hover {
-    background: linear-gradient(90deg, #6dd5ed 0%, #4aa8ff 100%);
-    box-shadow: 0 4px 16px rgba(74,168,255,0.18);
+    letter-spacing: 0.3px;
+    transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+    box-shadow: 0 10px 18px rgba(22, 163, 74, 0.25);
 }
 
-.realreal {
-    color: #4aa8ff;
-    text-decoration: underline;
-    transition: color 0.2s;
-}
-.realreal:hover {
-    color: #6dd5ed;
+.container_full{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(148, 163, 184, 0.35);
+    width: 500px;
+    max-width: 92vw;
+    height: auto;
+    padding: 32px 28px 28px;
+    justify-self: center;
+    border-radius: 20px;
+    transition-duration: 500ms;
+    background: rgba(2, 6, 23, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-p {
-    color: #a7b0bb;
-    font-size: 1rem;
-    margin-bottom: 0;
+.pswinput::placeholder, .emailinput::placeholder, .userinput::placeholder {
+    font-family: Itim;
+    color: rgb(82, 82, 82);
+}
+
+.pswinput, .emailinput, .userinput {
+    font-family: Itim;
+    width: 100%;
+    max-width: 360px;
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(15, 23, 42, 0.6);
+    color: #e5e7eb;
+    outline: none;
+    transition: border-color 200ms ease, box-shadow 200ms ease, background 200ms ease;
+    display: block;
+}
+
+.pswinput:focus, .emailinput:focus, .userinput:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.25);
+    background: rgba(15, 23, 42, 0.75);
+}
+
+
+.realreal{
+    transition-duration: 500ms;
+    color: #93c5fd;
+}
+
+@media (max-width: 540px) {
+    .main {
+        font-size: 24px;
+    }
+    .container_full {
+        padding: 24px 18px 20px;
+        border-radius: 16px;
+    }
+    .pswinput, .emailinput, .userinput {
+        width: 100%;
+        max-width: 320px;
+    }
+    .submitbutton {
+        width: 100%;
+    }
 }
