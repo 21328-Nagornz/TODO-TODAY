@@ -32,6 +32,10 @@
     background-color: rgb(255, 255, 255);
 }
 
+.submitbutton:hover{
+    cursor: pointer;
+}
+
 .container_full{
     display: flex;
     flex-direction: column;
